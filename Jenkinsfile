@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'vm-linux-agent' }
 
     environment {
         PORT = '8081'
