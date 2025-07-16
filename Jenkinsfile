@@ -8,6 +8,11 @@ pipeline {
     }
 
     stages {
+        stage('Provide permissions') {
+            steps {
+                sh 'chmod +x ./scripts/*.sh'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh './scripts/build_image.sh'
